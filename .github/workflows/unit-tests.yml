@@ -34,6 +34,12 @@ jobs:
             cpp_compiler: clang++
 
     steps:
+    - name: Install packages
+        run: >
+          sudo apt update
+          &&
+          sudo apt install -y valgrind lcov clang libgtest-dev
+
     - uses: actions/checkout@v3
 
     - name: Set reusable strings
