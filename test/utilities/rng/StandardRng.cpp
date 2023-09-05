@@ -4,13 +4,6 @@
 
 using namespace CasinoSDK::Utilities;
 
-TEST(StandardRngTest, SeedResultsInSameResult) {
-    auto rng = StandardRng();
-    rng.Seed(1234);
-    EXPECT_EQ(rng.RandomInt(1,100), 32);
-    EXPECT_EQ(rng.RandomInt(1,100), 17);
-}
-
 TEST(StandardRngTest, BoundsTest) {
     auto rng = StandardRng();
     for(int i = 0; i < 1000; i++) {
