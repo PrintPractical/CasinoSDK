@@ -1,7 +1,8 @@
 enable_testing()
 
 add_executable(${PROJECT_NAME}_tests 
-               tools/die/NormalDie.cpp)
+               tools/die/NormalDie.cpp
+               utilities/rng/StandardRng.cpp)
 
 target_link_libraries(${PROJECT_NAME}_tests 
                       ${PROJECT_NAME}
