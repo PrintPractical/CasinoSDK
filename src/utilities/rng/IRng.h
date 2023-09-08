@@ -1,3 +1,4 @@
+#pragma once
 /**
  * @file IRng.h
  * @author Chris Buchter

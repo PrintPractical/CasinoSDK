@@ -6,7 +6,8 @@ add_executable(${PROJECT_NAME}_tests
 
 target_link_libraries(${PROJECT_NAME}_tests 
                       ${PROJECT_NAME}
-                      GTest::gtest_main)
+                      GTest::gtest_main
+                      GTest::gmock_main)
 
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME}_tests)

@@ -1,3 +1,4 @@
+#pragma once
 /**
  * @file StandardRng.h
  * @author Chris Buchter

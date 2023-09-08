@@ -1,3 +1,4 @@
+#pragma once
 /**
  * @file IDie.h
  * @author Chris Buchter
