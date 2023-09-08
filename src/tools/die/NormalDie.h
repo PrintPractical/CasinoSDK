@@ -1,3 +1,4 @@
+#pragma once
 /**
  * @file NormalDie.h
  * @author Chris Buchter
@@ -8,7 +9,10 @@
  * @copyright Copyright (c) 2023
  * 
  */
+
 #include <IDie.h>
+#include <IRng.h>
+#include <memory>
 
 namespace CasinoSDK {
 namespace Tools {
@@ -20,7 +24,7 @@ public:
     /**
      * @brief Construct a new Normal Die object
      */
-    NormalDie() = default;
+    NormalDie();
     /**
      * @brief Destroy the Normal Die object
      */
@@ -33,6 +37,13 @@ public:
      * @param sides The number of desired sides.
      */
     void SetSides(unsigned int sides);
+    
+    /**
+     * @brief Set the RNG for the die.
+     * 
+     * @param rng Shared pointer to the RNG object
+     */
+    void SetRng(std::shared_ptr<Utilities::IRng> rng);
 
 public:
     /**
@@ -45,6 +56,7 @@ public:
     unsigned int GetSides() override;
 
 private:
+    std::shared_ptr<Utilities::IRng> mRng; 
     int mSides = 6;
 };
 }

@@ -23,5 +23,5 @@ int StandardRng::RandomInt(int min, int max) noexcept(false) {
     if(max <= min) {
         throw std::runtime_error("random number fault: requested max <= min");
     }
-    return((std::rand() % (max-min)) + min);
+    return((std::rand() % (max-min+1)) + min);
 }
